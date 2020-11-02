@@ -1,5 +1,4 @@
-       
-        a{
+        .upar{
             color: #e2cbae;
             font-family: 'Rock Salt', cursive;
             font-weight: bolder;
@@ -40,6 +39,7 @@
             background-image: url("images/background2.jpg");
             background-repeat: no-repeat;
             height: 100%;
+            text-align: center;
             background-position: center;
             background-size: cover;
             width: 100%;
@@ -68,10 +68,13 @@
         /* yaha se changes karlena iske upar mat karna */
         .scroll {
             border: 2px outset black;
-            background-color: rgb(238, 177, 134);
+            background-color: rgb(241, 212, 195);
             width: 100%;
+            padding-top: 8px;
         }
-        
+        .scrollFont{
+            font-family: 'Special Elite', cursive;
+        }
         .enter{
             font-size: larger;
             font-weight: bolder;
@@ -106,4 +109,14 @@
             .topnav input[type=text] {
                 border: 1px solid #ccc;
             }
+        }
+
+        /* FOOTER */
+        
+        .bottom-container{
+            margin: 0 auto 0px;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            background-color: rgb(24, 22, 19);
+            font-family: 'Special Elite', cursive;
         }
