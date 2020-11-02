@@ -117,19 +117,20 @@
 
         /* FOOTER */
         footer{
-            padding: 3% 25% 2px 25%;
+            padding: 2% 35% 2px 35%;
             background-color: #2c2222;
             text-align: center;
             font-family: 'Special Elite', cursive;
             display: block;
         }
-        .col-md-2{
+        .col-md-3{
             padding-left: 0;
             padding-right: 0;
         }
         .neeche{
-            margin-top: 3rem;
+            margin-top: 2rem;
             color: wheat;
+            font-size: 0.8rem;
             text-align: center;
         }
             /* footer icons */
