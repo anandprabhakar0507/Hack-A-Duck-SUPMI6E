@@ -10,5 +10,5 @@ function carousel3() {
   myIndex3++;
   if (myIndex3 > x.length) {myIndex3 = 1}    
   x[myIndex3-1].style.display = "block";  
-  setTimeout(carousel3, 9000);  
+  setTimeout(carousel3, 5000);  
 }
