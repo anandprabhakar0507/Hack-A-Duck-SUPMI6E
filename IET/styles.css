@@ -1,472 +1,458 @@
-        .navbar {
-            background-color: #2c2222;
-
-        }
-
-        .upar {
-            color: #e2cbae;
-            font-family: 'Rock Salt', cursive;
-            font-weight: bolder;
-            text-decoration: none;
-            font-size: larger;
-            margin: 10px 20px;
-        }
-
-        #navbarSupportedContent {
-            text-align: right;
-        }
-
-        .btn {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-
-        a:hover {
-            color: cornsilk;
-        }
-
-        .dropdown-menu {
-            min-width: 20rem;
-            top: 100%;
-        }
-
-        .thoda {
-            margin-right: 2.5rem;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .remember {
-            margin-bottom: 0.5rem;
-        }
-
-        .p-4 {
-            background-color: grey;
-            color: black;
-        }
-        .scroll {
-            border: 2px outset black;
-            background-color: rgb(241, 212, 195);
-            width: 100%;
-            padding-top: 8px;
-        }
-
-        .scrollFont {
-            font-family: 'Special Elite', cursive;
-        }
-
-        /* HITLER */
-        .mydiv {
-            border: 1px outset black;
-            background-color: cornsilk;
-            background-image: url("images/background2.jpg");
-            background-repeat: no-repeat;
-            height: 100%;
-            background-position: center;
-            background-size: cover;
-            width: 100%;
-            padding-bottom: 5rem;
-            text-align: center;
-
-        }
-
-        .mydiv2 {
-           
-        }
-
-        .mydiv3 {
-            padding-top: 3%;
-            font-size: 2.5rem;
-            font-family: 'Sansita Swashed', cursive;
-            cursor:pointer;
-        }
-        .aboutAdmin{
-            border-bottom: 5px outset #2c2222;
-            border-radius: 9%;
-        }
-        .aboutAdmin:hover{
-            color: rgb(114, 113, 113);
-        }
-        .overlayadmin {
-            height: 0%;
-            width: 100%;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            opacity: 0.99;
-            background-color: #1f1e1e;
-            overflow-y: auto;
-            transition: 0.25s;
-        }
-
-        .overlayadmin-content {
-            position: relative;
-            top: 10%;
-            width: 100%;
-            text-align: center;
-            margin-top: 30px;
-            padding: 0 10% 10%;
-            font-family: 'Delius', cursive;
-        }
-
-        .overlayadmin a {
-            padding: 8px;
-            text-decoration: none;
-            font-size: 32px;
-            color: #a1a0a0;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .overlayadmin a:hover, .overlayadmin a:focus {
-            color: #f1f1f1;
-        }
-
-        .overlayadmin .closebtn {
-            position: absolute;
-            text-align: right;
-            right: 4%;
-            font-size: 5rem;
-        }
-        
-        .enter {
-            font-size: 2rem;
-            font-weight: bolder;
-        }
-        .mydiv2::after{
-            content: " ^ Click Enter to view all the Blogs ^";
-            background-color: #e2cbae;
-            color: #2c2222;
-            font-weight: bold;
-            font-family: Viga;
-        }
-        .button:hover {
-            background-color: #3b5249;
-        }
-        @media screen and (max-height: 450px) {
-            .overlayadmin {
-                overflow-y: auto;
-            }
-
-            .overlayadmin a {
-                font-size: 20px;
-            }
-
-            .overlayadmin .closebtn {
-                font-size: 40px;
-                top: 15px;
-                right: 35px;
-            }
-        }
-        /* mayank photo ko upar neeche yaha se karlena */
-        .photo {
-            margin-top: 6%;
-            margin-bottom: 3%;
-        }
-
-        .button {
-            background-color: #87431d;
-            border: none;
-            color: white;
-            padding: 16px 52px;
-            text-align: center;
-            text-decoration: cornsilk;
-            display: inline-block;
-            font-size: 2rem;
-            cursor: pointer;
-            border-radius: 15px;
-        }
-
-        /* yaha se changes karlena iske upar mat karna */
-        
-
-        .image {  /*ye kyu hai?*/
-            top: 50%;
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-            border: 5px black;
-        }
-        .aboutWeb{
-            font-size: 3rem;
-            font-weight: bold;
-        }
-        .aboutpage {
-            border: 1px outset black;
-            font-size: 1.44rem;
-            font-family: 'Gamja Flower', cursive;
-            background-color: cornsilk;
-            background-image: url("images/handbook.png");
-            background-repeat: no-repeat;
-            height: 100vh;
-            text-align: center;
-            background-position: center;
-            background-size: cover;
-            width: 100%;
-            padding-bottom: 5rem;
-        }
-
-        .abouttextright {
-            color: black;
-            font-weight: bolder;
-            text-align: left;
-            text-decoration: none;
-            font-size: larger;
-            margin-right: 5px;
-            margin-left: 5px;
-            width: 710px;
-            height: 300px;
-            float: right;
-            padding-top: 50px;
-            padding-bottom: 15%;
-            padding-right: 300px;
-        }
-
-        .abouttextleft {
-            color: black;
-            font-weight: bolder;
-            text-decoration: none;
-            font-size: larger;
-            margin-right: 5px;
-            margin-left: 5px;
-            width: 710px;
-            height: 300px;
-            float: left;
-            padding-top: 50px;
-            padding-bottom: 50px;
-            padding-right: 50px;
-            padding-left: 26%;
-        }
-
-        .container101 {
-            position: relative;
-            width: 100%;
-        }
-
-
-        .overlay101 {
-            position: absolute;
-            bottom: 0;
-            background: rgb(0, 0, 0);
-            background: rgba(0, 0, 0, 0.5);
-            color: #f1f1f1;
-            width: 100%;
-            transition: .5s ease;
-            opacity: 0;
-            color: white;
-            font-size: 20px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .container101:hover .overlay101 {
-            opacity: 1;
-        }
-
-        @media screen and (max-width: 600px) {
-            .topnav .login-container {
-                float: none;
-            }
-
-            .topnav a,
-            .topnav input[type=text],
-            .topnav .login-container button {
-                float: none;
-                display: block;
-                text-align: left;
-                width: 100%;
-                margin: 0;
-                padding: 14px;
-            }
-
-            .topnav input[type=text] {
-                border: 1px solid #ccc;
-            }
-        }
-
-        /* Developers! */
-        .devepHeading{
-            font-family: 'Spartan', sans-serif;
-            font-size: 3rem;
-            border-bottom: 5px outset #2c2222;
-            border-radius: 9%;
-        }
-        .developers {
-            background-color: rgb(241, 212, 195);
-            width: 100%;
-            text-align: center;
-            font-family: 'Rock Salt', cursive;
-            font-weight: bolder;
-            text-decoration: none;
-            font-size: larger;
-            margin: auto;
-            height: 100vh;
-            padding: 100px;
-            margin-right: auto;
-            margin-left: auto;
- 
-        }
-
-        .center {
-            width: 600px;
-            height: 50px;
-            display: block;
-            margin-left: 100px;
-            margin-right: 5px;
-            margin-top: 100px;
-            margin-bottom: auto;
-        }
-
-        .mySlides {
-            display: none;
-        }
-
-        .mySlides2 {
-            display: none;
-
-        }
-
-        .myslides3 {
-            display: none;
-        }
-
-
-
-        .container {
-            position: relative;
-            width: 100%;
-        }
-
-        .newimage {
-            display: block;
-            opacity: 1;
-            width: 100%;
-            height: auto;
-            transition: .5s ease;
-
-        }
-
-        .slideHeading{
-            font-family: 'Cherry Cream Soda', cursive;
-        }
-        .middle {
-            transition: .5s ease;
-            opacity: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-        .container:hover .newimage {
-            opacity: 0.3;
-        }
-
-        .container:hover .middle {
-            opacity: 1;
-        }
-
-        .text {
-            background-color: black;
-            color: white;
-            font-size: 16px;
-            padding: 10%;
-        }
-
-        .scrolledit {
-            background-color: #2c2222;
-            color: #e2cbae;
-            border-radius: 20%;
-            font-family: 'Rock Salt', cursive;
-            font-weight: bolder;
-            font-size: larger;
-            margin-right: 5px;
-            margin-left: 5px;
-            width: 600px;
-            height: 300px;
-            float: right;
-            padding-top: 50px;
-            padding-bottom: 50px;
-
-
-        }
-
-
-
-        /* FOOTER */
-        footer {
-            padding: 2% 35% 2px 35%;
-            background-color: #2c2222;
-            text-align: center;
-            font-family: 'Special Elite', cursive;
-            display: block;
-        }
-
-        .col-md-3 {
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        .neeche {
-            margin-top: 2rem;
-            color: wheat;
-            font-size: 0.8rem;
-            text-align: center;
-        }
-
-        /* footer icons */
-        h3 {
-            color: wheat;
-        }
-
-        .footer-link {
-            color: wheat;
-        }
-
-        .fa {
-            padding: 20px;
-            font-size: 20px;
-            width: 60px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 50%;
-        }
-
-        .fa:hover {
-            background-color: white;
-            color: #2c2222;
-        }
-
-        .fa-linkedin {
-            background: wheat;
-            color: white;
-        }
-
-        .fa-yahoo {
-            background: wheat;
-            color: #2c2222;
-        }
-
-        .fa-facebook {
-            background: wheat;
-            color: #2c2222;
-        }
-
-        .fa-twitter {
-            background: wheat;
-            color: #2c2222;
-        }
-
-        .fa-google {
-            background: wheat;
-            color: #2c2222;
-        }
-
-        .fa-instagram {
-            background: wheat;
-            color: #2c2222;
-        }
+.navbar {
+  background-color: #2c2222;
+}
+
+.upar {
+  color: #e2cbae;
+  font-family: "Rock Salt", cursive;
+  font-weight: bolder;
+  text-decoration: none;
+  font-size: larger;
+  margin: 10px 20px;
+}
+
+#navbarSupportedContent {
+  text-align: right;
+}
+
+.btn {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+a:hover {
+  color: cornsilk;
+}
+
+.dropdown-menu {
+  min-width: 20rem;
+  top: 100%;
+}
+
+.thoda {
+  margin-right: 2.5rem;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.remember {
+  margin-bottom: 0.5rem;
+}
+
+.p-4 {
+  background-color: grey;
+  color: black;
+}
+.scroll {
+  border: 2px outset black;
+  background-color: rgb(241, 212, 195);
+  width: 100%;
+  padding-top: 8px;
+}
+
+.scrollFont {
+  font-family: "Special Elite", cursive;
+}
+
+/* HITLER */
+.mydiv {
+  border: 1px outset black;
+  background-color: cornsilk;
+  background-image: url("images/background2.jpg");
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
+.mydiv3 {
+  padding-top: 3%;
+  font-size: 2.5rem;
+  font-family: "Sansita Swashed", cursive;
+  cursor: pointer;
+}
+.aboutAdmin {
+  border-bottom: 5px outset #2c2222;
+  border-radius: 9%;
+}
+.aboutAdmin:hover {
+  color: rgb(114, 113, 113);
+}
+.overlayadmin {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  opacity: 0.99;
+  background-color: #1f1e1e;
+  overflow-y: auto;
+  transition: 0.25s;
+}
+
+.overlayadmin-content {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  padding: 0 10% 10%;
+  font-family: "Delius", cursive;
+}
+
+.overlayadmin a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 32px;
+  color: #a1a0a0;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlayadmin a:hover,
+.overlayadmin a:focus {
+  color: #f1f1f1;
+}
+
+.overlayadmin .closebtn {
+  position: absolute;
+  text-align: right;
+  right: 4%;
+  font-size: 5rem;
+}
+
+.enter {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.mydiv2::after {
+  content: " ^ Click Enter to view all the Blogs ^";
+  background-color: #e2cbae;
+  color: #2c2222;
+  font-weight: bold;
+  font-family: Viga;
+}
+.button:hover {
+  background-color: #3b5249;
+}
+@media screen and (max-height: 450px) {
+  .overlayadmin {
+    overflow-y: auto;
+  }
+
+  .overlayadmin a {
+    font-size: 20px;
+  }
+
+  .overlayadmin .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+/* mayank photo ko upar neeche yaha se karlena */
+.photo {
+  margin-top: 6%;
+  margin-bottom: 3%;
+}
+
+.button {
+  background-color: #87431d;
+  border: none;
+  color: white;
+  padding: 16px 52px;
+  text-align: center;
+  text-decoration: cornsilk;
+  display: inline-block;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+/* yaha se changes karlena iske upar mat karna */
+
+.image {
+  /*ye kyu hai?*/
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: 5px black;
+}
+.aboutWeb {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.aboutpage {
+  border: 1px outset black;
+  font-size: 1.44rem;
+  font-family: "Gamja Flower", cursive;
+  background-color: cornsilk;
+  background-image: url("images/handbook.png");
+  background-repeat: no-repeat;
+  height: 100vh;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  padding-bottom: 5rem;
+}
+
+.abouttextright {
+  color: black;
+  font-weight: bolder;
+  text-align: left;
+  text-decoration: none;
+  font-size: larger;
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 710px;
+  height: 300px;
+  float: right;
+  padding-top: 50px;
+  padding-bottom: 15%;
+  padding-right: 300px;
+}
+
+.abouttextleft {
+  color: black;
+  font-weight: bolder;
+  text-decoration: none;
+  font-size: larger;
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 710px;
+  height: 300px;
+  float: left;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 50px;
+  padding-left: 26%;
+}
+
+.container101 {
+  position: relative;
+  width: 100%;
+}
+
+.overlay101 {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container101:hover .overlay101 {
+  opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .login-container {
+    float: none;
+  }
+
+  .topnav a,
+  .topnav input[type="text"],
+  .topnav .login-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+
+  .topnav input[type="text"] {
+    border: 1px solid #ccc;
+  }
+}
+
+/* Developers! */
+.devepHeading {
+  font-family: "Spartan", sans-serif;
+  font-size: 3rem;
+  border-bottom: 5px outset #2c2222;
+  border-radius: 9%;
+}
+.developers {
+  background-color: rgb(241, 212, 195);
+  width: 100%;
+  text-align: center;
+  font-family: "Rock Salt", cursive;
+  font-weight: bolder;
+  text-decoration: none;
+  font-size: larger;
+  margin: auto;
+  height: 100vh;
+  padding: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.center {
+  width: 600px;
+  height: 50px;
+  display: block;
+  margin-left: 100px;
+  margin-right: 5px;
+  margin-top: 100px;
+  margin-bottom: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides2 {
+  display: none;
+}
+
+.myslides3 {
+  display: none;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.newimage {
+  display: block;
+  opacity: 1;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+}
+
+.slideHeading {
+  font-family: "Cherry Cream Soda", cursive;
+}
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .newimage {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  padding: 10%;
+}
+
+.scrolledit {
+  background-color: #2c2222;
+  color: #e2cbae;
+  border-radius: 20%;
+  font-family: "Rock Salt", cursive;
+  font-weight: bolder;
+  font-size: larger;
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 600px;
+  height: 300px;
+  float: right;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* FOOTER */
+footer {
+  padding: 2% 35% 2px 35%;
+  background-color: #2c2222;
+  text-align: center;
+  font-family: "Special Elite", cursive;
+  display: block;
+}
+
+.col-md-3 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.neeche {
+  margin-top: 2rem;
+  color: wheat;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* footer icons */
+h3 {
+  color: wheat;
+}
+
+.footer-link {
+  color: wheat;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  background-color: white;
+  color: #2c2222;
+}
+
+.fa-linkedin {
+  background: wheat;
+  color: white;
+}
+
+.fa-yahoo {
+  background: wheat;
+  color: #2c2222;
+}
+
+.fa-facebook {
+  background: wheat;
+  color: #2c2222;
+}
+
+.fa-twitter {
+  background: wheat;
+  color: #2c2222;
+}
+
+.fa-google {
+  background: wheat;
+  color: #2c2222;
+}
+
+.fa-instagram {
+  background: wheat;
+  color: #2c2222;
+}
