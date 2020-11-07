@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Google Fonts  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rock+Salt&family=Vampiro+One&family=Yesteryear&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Viga&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delius&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand upar" href="">My Friend's Blog</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link upar" href="">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link upar" href="">Developers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link thoda upar" href="">Contact Us</a>
+        </li>
+      </ul>
+      <!-- DROPDOWN -->
+      <div class="btn-group dropleft">
+        <button
+          type="button"
+          class="btn btn-danger dropdown-toggle"
+          data-toggle="dropdown"
+        >
+          ADMIN
+        </button>
+        <form class="dropdown-menu p-4">
+          <p class="signIn">Welcome Admin!<br>You are logged in, Happy Blogging!</p>
+        </form>
+        <!-- <form class="dropdown-menu p-4">
+          <div class="form-group">
+            <label for="exampleDropdownFormEmail2">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleDropdownFormEmail2"
+              placeholder="email@example.com"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleDropdownFormPassword2">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="exampleDropdownFormPassword2"
+              placeholder="Password"
+            />
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="dropdownCheck2"
+            />
+            <label class="form-check-label remember" for="dropdownCheck2">
+              Remember me
+            </label>
+          </div>
+          <form action="/admin">
+            <button type="submit" class="btn btn-danger">Sign in</button>
+          </form>
+        </form> -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- Body start ho rha hai -->
+
+  <body>
+    <div class="container">
+      <h1 class="compose">Compose</h1>
+        <div>
+              <label class="composeTitle">Title</label>
+              <input type="text" class="form-control" name="pubText" autocomplete="off">
+              <label class="composeTitle">Post</label>
+              <textarea name="postText" class="form-control" cols="150%" rows="10%"></textarea>
+        </div>
+              <button type="submit" class="btn btn-primary">Publish</button>
+              
+    </div>
+    
+  </body>
+  <!-- FOOTER -->
+  <footer>
+    <h3>Contact Us</h3>
+    <br />
+    <div class="bottom-container row">
+      <div class="col-md-3">
+        <a href="#" class="fa fa-google"></a><br />
+        <a class="footer-link" href="https://www.linkedin.com/">Email</a>
+      </div>
+      <div class="col-md-3">
+        <a href="#" class="fa fa-facebook"></a><br />
+        <a class="footer-link" href="https://www.linkedin.com/">Facebook</a>
+      </div>
+      <div class="col-md-3">
+        <a href="#" class="fa fa-instagram"></a><br />
+        <a class="footer-link" href="https://www.linkedin.com/">Instagram</a>
+      </div>
+      <div class="col-md-3">
+        <a href="#" class="fa fa-twitter"></a><br />
+        <a class="footer-link" href="https://www.linkedin.com/">Twitter</a>
+      </div>
+    </div>
+    <p class="neeche">© Hack A Duck - SUPMI6E</p>
+  </footer>
+</html>
+
