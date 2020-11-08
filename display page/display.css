@@ -1,101 +1,86 @@
-*{
-    margin : 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-#blogs_display{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    
+#blogs_display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-#blogs{
-    color: black;
-    border: gray 2px solid;
-    
+#blogs {
+  color: black;
+  border: gray 2px solid;
+}
+.my_blog {
+  position: relative;
+  left: 30%;
 
+  border-radius: 2%;
+  width: 50%;
 }
-.my_blog{
-    position: relative;
-    left: 30%;
-    
-    
-    border-radius: 2%;
-    width: 50%;
-    
-    
+.blog-title {
+  font-family: "Dancing Script";
+  padding: 2%;
+  padding-bottom: 0;
+  font-weight: bold;
+  font-size: 45px;
 }
-.blog-title{
-    font-family: 'Dancing Script' ;
-    padding: 2%;
-    padding-bottom: 0;
-    font-weight: bold;
-    font-size: 45px;
-
+.blog-titlebar {
+  padding-left: 2%;
+  font-weight: lighter;
+  color: grey;
+  font-size: 15px;
 }
-.blog-titlebar{
-    padding-left: 2%;
-    font-weight: lighter;
-    color: grey;
-    font-size: 15px;
+.blog-img img {
+  padding-left: 2%;
+  margin: 0%;
+  max-width: 90%;
+  max-height: 90%;
 }
-.blog-img img{
-    padding-left: 2%;
-    margin: 0%;
-    max-width:90%;
-    max-height:90%;
-}
-.blog-body{
-    padding: 2%;
-    font-weight: lighter;
-    color: grey;
-    font-size: 18px;
-
-
+.blog-body {
+  padding: 2%;
+  font-weight: lighter;
+  color: grey;
+  font-size: 18px;
 }
 
-.blog-likes{
-    padding-left: 2%;
-    font-size: 15px;
-    display: inline-block;
+.blog-likes {
+  padding-left: 2%;
+  font-size: 15px;
+  display: inline-block;
 }
-.blog-likes button{
-    width: 20px;
-    height: 20px;
-    
+.blog-likes button {
+  width: 20px;
+  height: 20px;
 }
-.blog-likes img{
-    padding: 0%;
-    margin: 0%;
-    max-width:100%;
-    max-height:100%;
+.blog-likes img {
+  padding: 0%;
+  margin: 0%;
+  max-width: 100%;
+  max-height: 100%;
 }
-.blog-dislikes{
-    padding-left: 2%;
-    font-size: 15px;
-   display: inline-block;
-
+.blog-dislikes {
+  padding-left: 2%;
+  font-size: 15px;
+  display: inline-block;
 }
-.blog-dislikes button{
-    width: 20px;
-    height: 20px;
-   
-    
+.blog-dislikes button {
+  width: 20px;
+  height: 20px;
 }
-.blog-dislikes img{
-    padding: 0%;
-    margin: 0%;
-    max-width:100%;
-    max-height:100%;
+.blog-dislikes img {
+  padding: 0%;
+  margin: 0%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.blog-comments{
-    padding-left: 2%;
-    padding-top: 1%;
+.blog-comments {
+  padding-left: 2%;
+  padding-top: 1%;
 }
-.blog-comments input{
-    width: 88%;
-    height: 50%;
-    overflow: hidden;
-    
+.blog-comments input {
+  width: 88%;
+  height: 50%;
+  overflow: hidden;
 }

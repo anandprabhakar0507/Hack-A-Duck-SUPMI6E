@@ -98,10 +98,11 @@
         >
           ADMIN
         </button>
-        <form class="dropdown-menu p-4">
+        <form class="dropdown-menu p-4 login-form">
           <div class="form-group">
             <label for="exampleDropdownFormEmail2">Email address</label>
             <input
+              name="email"
               type="email"
               class="form-control"
               id="exampleDropdownFormEmail2"
@@ -111,6 +112,7 @@
           <div class="form-group">
             <label for="exampleDropdownFormPassword2">Password</label>
             <input
+              name="password"
               type="password"
               class="form-control"
               id="exampleDropdownFormPassword2"
@@ -127,9 +129,9 @@
               Remember me
             </label>
           </div>
-          <form action="/admin">
-            <button type="submit" class="btn btn-danger">Sign in</button>
-          </form>
+          <button type="submit" class="btn btn-danger login-btn">
+            Sign in
+          </button>
         </form>
       </div>
     </div>
@@ -348,6 +350,7 @@
         <script src="func.js"></script>
       </div>
     </section>
+    <script src="./login.js"></script>
   </body>
   <!-- FOOTER -->
   <footer>

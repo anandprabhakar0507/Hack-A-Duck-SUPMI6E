@@ -19,6 +19,12 @@ module.exports = {
       passwordChangedAt: req.body.passwordChangedAt,
     });
     const token = generateToken(newUser._id);
+    res.cookie('token', token, {
+      expires: new Date(
+        Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
+      ),
+      httpOnly: true,
+    });
     res.status(201).json({
       status: 'success',
       token,
@@ -37,6 +43,12 @@ module.exports = {
       throw new Error('Aisa to koi hai hi nahi galat email ya pass daala hai');
     }
     const token = generateToken(user._id);
+    res.cookie('token', token, {
+      expires: new Date(
+        Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
+      ),
+      httpOnly: true,
+    });
     res.status(200).json({
       status: 'success',
       token,
@@ -49,6 +61,9 @@ module.exports = {
       req.headers.authorization.startsWith('Bearer')
     ) {
       token = req.headers.authorization.split(' ')[1];
+    } else if (req.cookies.token) {
+      // eslint-disable-next-line prefer-destructuring
+      token = req.cookies.token;
     }
     if (!token) {
       throw new Error('Token to hai hi nahi');
