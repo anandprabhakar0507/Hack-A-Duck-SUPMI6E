@@ -345,6 +345,8 @@ body {
 .newimage {
   display: block;
   opacity: 1;
+  border-radius: 100%;
+  border: 5px outset white;
   width: 25vw;
   height: 25vw;
   transition: 0.5s ease;
