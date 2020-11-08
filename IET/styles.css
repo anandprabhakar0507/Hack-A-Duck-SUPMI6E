@@ -186,8 +186,9 @@ body {
   border: 5px black;
 }
 .aboutWeb {
-  font-size: 4vw;
+  font-size: 3vw;
   font-weight: bold;
+  font-family: "Spartan", sans-serif;
 }
 .aboutpage {
   border: 1px outset black;
@@ -289,12 +290,14 @@ body {
   font-family: "Spartan", sans-serif;
   font-size: 3rem;
   border-bottom: 5px outset #2c2222;
-  border-top: 5px outset #2c2222;
+  padding-top: 4%;
   border-radius: 9%;
 }
 .developers {
   border-top: 1px outset black;
-  background-color: rgb(241, 212, 195);
+  background-image: url("images/developer.jpg");
+  
+  /* background-color: rgb(241, 212, 195); */
   width: 100%;
   text-align: center;
   font-family: "Rock Salt", cursive;
