@@ -186,8 +186,9 @@ body {
   border: 5px black;
 }
 .aboutWeb {
-  font-size: 3rem;
+  font-size: 3vw;
   font-weight: bold;
+  font-family: "Spartan", sans-serif;
 }
 .aboutpage {
   border: 1px outset black;
@@ -196,44 +197,51 @@ body {
   background-color: cornsilk;
   background-image: url("images/handbook.png");
   background-repeat: no-repeat;
-  height: 100vh;
-  text-align: center;
   background-position: center;
   background-size: cover;
-  width: 100%;
-  padding-bottom: 5rem;
+  max-width: 100vw;
+  height:100vh;
+  position:relative;
+  text-align:center;
+  margin-bottom:0;
 }
 
 .abouttextright {
   color: black;
   font-weight: bolder;
-  text-align: left;
   text-decoration: none;
-  font-size: larger;
-  margin-right: 5px;
-  margin-left: 5px;
-  width: 710px;
-  height: 300px;
-  float: right;
-  padding-top: 50px;
-  padding-bottom: 15%;
-  padding-right: 300px;
+  font-size: 1.5vw;
+  position: absolute;
+  top:12vh;
+  right: 25vw;
+  left: 55vw;
+ 
+  
 }
 
 .abouttextleft {
   color: black;
   font-weight: bolder;
   text-decoration: none;
-  font-size: larger;
-  margin-right: 5px;
-  margin-left: 5px;
-  width: 710px;
-  height: 300px;
-  float: left;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-right: 50px;
-  padding-left: 26%;
+  font-size: 1.5vw;
+  position: absolute;
+  top: 12vh;
+  right: 57vw;
+  left: 25vw;
+ 
+}
+
+
+.aboutanimeleft {
+  color: black;
+  font-weight: bolder;
+  text-decoration: none;
+  font-size: 1.5vw;
+  position: absolute;
+  top: 47vh;
+  right: 55vw;
+  left: 25vw;
+ 
 }
 
 .container101 {
@@ -260,10 +268,6 @@ body {
   opacity: 1;
 }
 
-@media screen and (max-width: 600px) {
-  .topnav .login-container {
-    float: none;
-  }
 
   .topnav a,
   .topnav input[type="text"],
@@ -279,38 +283,44 @@ body {
   .topnav input[type="text"] {
     border: 1px solid #ccc;
   }
-}
+
 
 /* Developers! */
 .devepHeading {
   font-family: "Spartan", sans-serif;
   font-size: 3rem;
   border-bottom: 5px outset #2c2222;
+  padding-top: 4%;
   border-radius: 9%;
 }
 .developers {
-  background-color: rgb(241, 212, 195);
+  border-top: 1px outset black;
+  background-image: url("images/developer.jpg");
+  
+  /* background-color: rgb(241, 212, 195); */
   width: 100%;
   text-align: center;
   font-family: "Rock Salt", cursive;
   font-weight: bolder;
   text-decoration: none;
-  font-size: larger;
-  margin: auto;
+  font-size: 1.5vh;
   height: 100vh;
-  padding: 100px;
-  margin-right: auto;
-  margin-left: auto;
+  position:relative;
+  text-align:center;
+  
+
 }
 
 .center {
-  width: 600px;
-  height: 50px;
+  width: 40vw;
+  height: 20vh;
   display: block;
-  margin-left: 100px;
-  margin-right: 5px;
-  margin-top: 100px;
-  margin-bottom: auto;
+  position: absolute;
+  top: 30vh;
+  left: 10vw;
+  right: 40vw;
+  padding-right:5px;
+
 }
 
 .mySlides {
@@ -333,13 +343,17 @@ body {
 .newimage {
   display: block;
   opacity: 1;
-  width: 100%;
-  height: auto;
+  width: 1vw;
+  height: 50vh;
   transition: 0.5s ease;
 }
 
 .slideHeading {
   font-family: "Cherry Cream Soda", cursive;
+  font-size:1.5vw;
+  padding-top:50px;
+  padding-bottom:50px;
+  
 }
 .middle {
   transition: 0.5s ease;
@@ -373,14 +387,16 @@ body {
   border-radius: 20%;
   font-family: "Rock Salt", cursive;
   font-weight: bolder;
-  font-size: larger;
-  margin-right: 5px;
-  margin-left: 5px;
-  width: 600px;
-  height: 300px;
-  float: right;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  font-size: auto;
+  overflow:auto;
+  width: 40vw;
+  height: 40vh;
+  position: absolute;
+  top: 35vh;
+  right: 10vw;
+  left:50vw;
+  padding-left:5px;
+  
 }
 
 /* FOOTER */
@@ -390,6 +406,7 @@ footer {
   text-align: center;
   font-family: "Special Elite", cursive;
   display: block;
+  position: relative;
 }
 
 .col-md-3 {
