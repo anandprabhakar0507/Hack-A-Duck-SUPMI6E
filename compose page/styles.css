@@ -59,6 +59,10 @@ body {
 .form-control{
      margin-bottom: 1rem;
 }
+#img{
+  display: block;
+  margin-bottom: 2%;
+}
 .compose{
      font-size: 4rem;
      border-bottom: 4px outset black;
@@ -68,6 +72,9 @@ body {
 .composeTitle{
      font-size: 1.5rem;
      padding-top: 1%;
+}
+.composeImg{
+    font-size: 1.25rem;
 }
 
 /* FOOTER */

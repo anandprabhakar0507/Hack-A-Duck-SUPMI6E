@@ -23,17 +23,14 @@ export default class Blog {
   gettemplate(title, body, likes, dislikes) {
     return `
                 <div class="my_blog">
-                    <div class="admin-options"><button class="delete-button btn-danger"><i class="fa fa-trash-o"></i></button>
-                    <button class="edit-button btn-primary"><i class="fa fa-pencil-square-o"></i></button>
-                    </div>
-                    
                     <div class="blog-title"> ${title}</div>
 
                     <div class="blog-titlebar">Posted on : lol</div>
 
                     <div class="blog-img"><img src="fort_collins_winter.jpg"></div>
 
-                    <div class="blog-body"> ${body}
+                    <div class="blog-body">
+                    <p class="line">${body}</p>
                     </div>
 
                     <div class="blog-likes">
@@ -50,6 +47,9 @@ export default class Blog {
                         <h4 class="h4">Comments</h4>
                         <input type="text" class="form-control comment_in"> 
                         <button class="btn btn-warning post">Post</button> 
+                    </div>
+                    <div class="admin-options"><button class="delete-button btn-danger"><i class="fa fa-trash-o"></i></button>
+                    <button class="edit-button btn-primary"><i class="fa fa-pencil-square-o"></i></button>
                     </div>
                     <hr class="hr">
                 </div>
