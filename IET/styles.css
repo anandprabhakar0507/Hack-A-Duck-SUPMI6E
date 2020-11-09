@@ -1,3 +1,32 @@
+/* hamaara apna scroll bar*/
+
+/* to set its width */
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+
+ 
+/* configuring the moving handle */
+::-webkit-scrollbar-thumb {
+  background:  #b30000; 
+  border-radius: 55px;
+  border : 2px outset black;
+}
+
+/* configuring what will happen when we hover on the handle */
+::-webkit-scrollbar-thumb:hover {
+  background: #dc3545; 
+}
+
+/* configuring the path on which the handle moves */
+::-webkit-scrollbar-track {
+  box-shadow: inset 2px 2px 10px black; 
+  border-radius: 55px;
+}
+
+/* scrollbar customisation ends here */
+
 .navbar {
   background-color: #2c2222;
 }
@@ -392,7 +421,7 @@ body {
   font-family: "Rock Salt", cursive;
   font-weight: bolder;
   font-size: auto;
-  overflow:auto;
+  /*overflow:auto;*/ /* agar developer ki statements mai scroll bar chahiye to bass previous comments hata dena */
   width: 40vw;
   height: 20vw;
   position: absolute;
