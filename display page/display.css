@@ -102,6 +102,24 @@
   background-image: url("/display\ page/wallpaper.jpg");
   align-items: center;
 }
+#blog-add{
+  width: 20%;
+  height: 8%;
+  border: black solid 2px;
+  border-radius: 8px;
+  position: fixed;
+  left: 2%;
+  top: 11%;
+}
+#blog-add button{
+  width: 100%;
+  height: 100%;
+  background-color: lightcoral;
+  color: brown;
+  font-family: Lobster;
+  font-weight: bold;
+  font-size: 2vw;
+}
 #blogs {
   color: black;
   border: gray 2px solid;
@@ -112,9 +130,32 @@
   border-radius: 2%;
   width: 50%;
 }
+.admin-options{
+  position: relative;
+  left: 80%;
+}
+.delete-button{
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+.delete-button i{
+  max-width: 100%;
+  max-height: 100%;
+}
+.edit-button{
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+.edit-button i{
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .blog-title {
   font-family: "Dancing Script";
-  padding: 2% 2% 0 2%;
+  padding: 0% 2% 0 2%;
   font-weight: bold;
   font-size: 3.5rem;
   border-bottom: 3px outset rgb(143, 141, 141);

@@ -23,7 +23,10 @@ export default class Blog {
   gettemplate(title, body, likes, dislikes) {
     return `
                 <div class="my_blog">
-
+                    <div class="admin-options"><button class="delete-button btn-danger"><i class="fa fa-trash-o"></i></button>
+                    <button class="edit-button btn-primary"><i class="fa fa-pencil-square-o"></i></button>
+                    </div>
+                    
                     <div class="blog-title"> ${title}</div>
 
                     <div class="blog-titlebar">Posted on : lol</div>
