@@ -34,21 +34,21 @@ export default class Blog {
                     </div>
 
                     <div class="blog-likes">
-                        <button class="like-button"><img src="images.png"></button>
+                        <button class="like-button btn-danger"><i class="fas fa-thumbs-up"></i></button>
                         <span class="like-count">
                         ${likes}</span>
                     </div>
                     <div class="blog-dislikes">
-                    <button class="dislike-button"><img src="dis.jpg"></button>
+                    <button class="dislike-button btn-dark"><i class="fas fa-thumbs-down"></i></button>
                     <span class="dislike-count">
                     ${dislikes}</span>
                     </div>
                     <div class="blog-comments">
-                        <h5>Comments</h5>
-                        ye kya bavasir bana diye ho
-                        <input type="text" class="comment_in"> 
-                        <button class="post">Post</button> 
+                        <h4 class="h4">Comments</h4>
+                        <input type="text" class="form-control comment_in"> 
+                        <button class="btn btn-warning post">Post</button> 
                     </div>
+                    <hr class="hr">
                 </div>
       `;
   }

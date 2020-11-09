@@ -1,3 +1,97 @@
+
+/* Header styling */  
+
+  .navbar {
+    background-color: #2c2222;
+  }
+  .upar {
+    color: #e2cbae;
+    font-family: "Rock Salt", cursive;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: larger;
+    margin: 10px 20px;
+  }
+
+  #navbarSupportedContent {
+    text-align: right;
+  }
+
+  .btn {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+
+  a:hover {
+    color: cornsilk;
+  }
+
+  .dropdown-menu {
+    min-width: 20rem;
+    top: 100%;
+  }
+
+  .thoda {
+    margin-right: 2.5rem;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .remember {
+    margin-bottom: 0.5rem;
+  }
+
+  .p-4 {
+    background-color: grey;
+    color: black;
+  }
+  .scroll {
+    border: 2px outset black;
+    background-color: rgb(241, 212, 195);
+    width: 100%;
+    padding-top: 8px;
+  }
+
+  .scrollFont {
+    font-family: "Special Elite", cursive;
+  }
+  ::-webkit-scrollbar {
+    width: 18px;
+  }
+  /* configuring the moving handle */
+  ::-webkit-scrollbar-thumb {
+    background:  #b30000; 
+    border-radius: 55px;
+    border : 2px outset black;
+  }
+
+  /* configuring what will happen when we hover on the handle */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #dc3545; 
+  }
+
+  /* configuring the path on which the handle moves */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 2px 2px 10px black; 
+    border-radius: 55px;
+  }
+
+/* Header styling close */
+
+
+
+
+.hr{
+    border: dotted rgb(92, 88, 85) 10px;
+    border-bottom: none;
+    opacity: 0.5;
+    width: 15%;
+    margin: 2% auto 2% auto;
+}
+/* iske baad changes nahi kiye  */
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +99,7 @@
 #blogs_display {
   display: flex;
   flex-direction: column;
+  background-image: url("/display\ page/wallpaper.jpg");
   align-items: center;
 }
 #blogs {
@@ -13,51 +108,56 @@
 }
 .my_blog {
   position: relative;
-  left: 30%;
-
+  left: 25%;
   border-radius: 2%;
   width: 50%;
 }
 .blog-title {
   font-family: "Dancing Script";
-  padding: 2%;
-  padding-bottom: 0;
+  padding: 2% 2% 0 2%;
   font-weight: bold;
-  font-size: 45px;
+  font-size: 3.5rem;
+  border-bottom: 3px outset rgb(143, 141, 141);
+  border-radius: 9%;
 }
 .blog-titlebar {
-  padding-left: 2%;
+  margin-top: 4%;
   font-weight: lighter;
   color: grey;
-  font-size: 15px;
+  font-size: 1rem;
 }
 .blog-img img {
-  padding-left: 2%;
   margin: 0%;
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 100%;
+  max-height: 100%;
 }
 .blog-body {
+  /* padding: 2% 10% 4% 2%; */
+  font-weight: 600;
+  /* color: grey; */
+  color: black;
+  /* font-size: 20px; */
   padding: 2%;
-  font-weight: lighter;
-  color: grey;
   font-size: 18px;
+  font-family: 'Volkhov', serif;
+  margin: 2% 0 4% 0;
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 2%;
+  opacity: 0.6;
 }
 
 .blog-likes {
   padding-left: 2%;
+
   font-size: 15px;
   display: inline-block;
 }
 .blog-likes button {
-  width: 20px;
-  height: 20px;
-}
-.blog-likes img {
-  padding: 0%;
-  margin: 0%;
-  max-width: 100%;
-  max-height: 100%;
+  padding-left: 2%;
+  
+  width: 30px;
+  height: 30px;
 }
 .blog-dislikes {
   padding-left: 2%;
@@ -65,22 +165,104 @@
   display: inline-block;
 }
 .blog-dislikes button {
-  width: 20px;
-  height: 20px;
+  padding-left: 2%;
+  width: 30px;
+  height: 30px;
 }
-.blog-dislikes img {
-  padding: 0%;
-  margin: 0%;
-  max-width: 100%;
-  max-height: 100%;
-}
-
 .blog-comments {
   padding-left: 2%;
   padding-top: 1%;
+  padding-bottom: 5%;
 }
 .blog-comments input {
+  padding-left: 2%;
   width: 88%;
   height: 50%;
   overflow: hidden;
+}
+.form-control{
+  display: inline-block;
+     margin-bottom: 1rem;
+}
+.h4{
+  padding-top: 1%;
+  font-weight: 600;
+}
+
+
+
+
+/* footer */
+footer {
+  padding: 2% 35% 2px 35%;
+  background-color: #2c2222;
+  text-align: center;
+  font-family: "Special Elite", cursive;
+  display: block;
+  position: relative;
+}
+
+.col-md-3 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.neeche {
+  margin-top: 2rem;
+  color: wheat;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* footer icons */
+h3 {
+  color: wheat;
+}
+
+.footer-link {
+  color: wheat;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  background-color: white;
+  color: #2c2222;
+}
+
+.fa-linkedin {
+  background: wheat;
+  color: white;
+}
+
+.fa-yahoo {
+  background: wheat;
+  color: #2c2222;
+}
+
+.fa-facebook {
+  background: wheat;
+  color: #2c2222;
+}
+
+.fa-twitter {
+  background: wheat;
+  color: #2c2222;
+}
+
+.fa-google {
+  background: wheat;
+  color: #2c2222;
+}
+
+.fa-instagram {
+  background: wheat;
+  color: #2c2222;
 }
