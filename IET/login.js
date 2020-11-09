@@ -17,12 +17,10 @@ document.querySelector(".login-form").onsubmit = async function (e) {
       mode: "cors",
     });
     const respJSON = await resp.json();
+    if(respJSON.status==="success" && respJSON.token){
+      window.location.href = "../display page/display_html.html"
+    }
     console.log(respJSON);
-    const blogs = await fetch("http://localhost:3000/api/blogs", {
-      credentials: "include",
-    });
-    const blogsJSON = await blogs.json();
-    console.log(blogsJSON);
   } catch (error) {
     console.log(error.message);
   }

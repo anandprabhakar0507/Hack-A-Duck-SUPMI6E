@@ -99,7 +99,9 @@
           ADMIN
         </button>
         <form class="dropdown-menu p-4">
-          <p class="signIn">Welcome Admin!<br>You are logged in, Happy Blogging!</p>
+          <p class="signIn">
+            Welcome Admin!<br />You are logged in, Happy Blogging!
+          </p>
         </form>
         <!-- <form class="dropdown-menu p-4">
           <div class="form-group">
@@ -143,18 +145,27 @@
   <body>
     <div class="container">
       <h1 class="compose">Compose</h1>
-        <div>
-              <label class="composeTitle">Title</label>
-              <input type="text" class="form-control" name="pubText" autocomplete="off">
-              <label class="composeTitle">Post</label>
-              <textarea name="postText" class="form-control" cols="150%" rows="10%"></textarea>
-              <label for="">Chose Image</label>  
-              <input type="file" id="img" name="image">
-        </div>
-              <button type="submit" class="btn btn-primary">Publish</button>
-              
+      <form class="compose-form">
+        <label class="composeTitle">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          name="title"
+          autocomplete="off"
+        />
+        <label class="composeTitle">Post</label>
+        <textarea
+          name="body"
+          class="form-control"
+          cols="150%"
+          rows="10%"
+        ></textarea>
+        <label for="">Chose Image</label>
+        <input type="file" id="img" name="file" />
+        <button type="submit" class="btn btn-primary">Publish</button>
+      </form>
     </div>
-    
+    <script src="./compose.js"></script>
   </body>
   <!-- FOOTER -->
   <footer>
@@ -181,4 +192,3 @@
     <p class="neeche">© Hack A Duck - SUPMI6E</p>
   </footer>
 </html>
-
