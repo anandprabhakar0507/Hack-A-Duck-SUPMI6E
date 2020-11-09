@@ -6,7 +6,8 @@ const router = express.Router();
 router
   .route('/:id')
   .get(blogController.getBlog)
-  .patch(blogController.uploadImage, blogController.updateBlog);
+  .patch(blogController.uploadImage, blogController.updateBlog)
+  .delete(blogController.deleteBlog);
 router
   .route('/')
   .get(blogController.getAllBlogs)

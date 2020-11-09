@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(morgan('dev'));
 app.use((req, res, next) => {
-  console.log(req.cookies.token);
+  //console.log(req.cookies.token);
   next();
 });
 app.use('/api/blogs', blogRouter);

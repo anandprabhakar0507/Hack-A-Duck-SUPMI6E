@@ -76,4 +76,14 @@ module.exports = {
     });
   }),
   uploadImage: upload.single('image'),
+  deleteBlog: catchAsync(async (req, res, next) => {
+    const deletedBlog = await Blog.findByIdAndDelete(req.params.id);
+    if (!deletedBlog) {
+      throw new Error('No blog with such id found');
+    }
+    res.status(200).json({
+      status: 'success',
+      deletedBlog,
+    });
+  }),
 };
