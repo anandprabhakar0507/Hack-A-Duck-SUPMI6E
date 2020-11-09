@@ -7,6 +7,7 @@ renderblogs();
 async function get_blogs() {
   const res = await fetch("http://localhost:3000/api/blogs");
   const respJson = await res.json();
+
   respJson.data.blogs.forEach((element) => {
     blogs_a.push(
       new Blog(
@@ -27,3 +28,4 @@ async function renderblogs() {
     blogs_box.appendChild(element.getelement());
   });
 }
+

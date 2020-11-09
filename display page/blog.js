@@ -1,5 +1,5 @@
 export default class Blog {
-  constructor(id,title, body, likes, dislikes) {
+  constructor(id, title, body, likes, dislikes) {
     this.id = id;
     this.title = title;
     this.body = body;
@@ -57,6 +57,7 @@ export default class Blog {
   }
   eventlisteners() {
     const likebtn = this.el.querySelector(".like-button");
+    const deleteBtn = this.el.querySelector(".delete-button");
     var like_count = this.el.querySelector(".like-count");
     var liked = 0;
 
@@ -106,6 +107,12 @@ export default class Blog {
       } else {
         console.log("error");
       }
+    };
+    deleteBtn.onclick = async () => {
+      const res = await fetch(`http://localhost:3000/api/blogs/${this.id}`, {
+        method: "DELETE",
+      });
+      location.reload();
     };
   }
 }
