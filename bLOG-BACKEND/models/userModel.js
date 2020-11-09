@@ -65,6 +65,7 @@ userSchema.methods.checkPasswordChange = function (timestamp) {
   if (!this.passwordChangedAt) {
     return false;
   }
+
   const lastChange = this.passwordChangedAt.getTime() / 1000;
   return lastChange > timestamp;
 };
