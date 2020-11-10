@@ -109,6 +109,13 @@
   background-image: url("/display\ page/wallpaper.jpg");
   align-items: center;
 }
+.searchblog{
+  width: 50vw;
+  height: 7vh;
+  border: black solid 3px;
+  font-family: "Caveat";
+  font-size: 150%;
+}
 #blog-add{
   width: 20%;
   height: 10%;
@@ -141,9 +148,9 @@
 }
 .my_blog {
   position: relative;
-  left: 25%;
+  
   border-radius: 2%;
-  width: 50%;
+  width: 50vw;
 }
 .admin-options{
   position: relative;

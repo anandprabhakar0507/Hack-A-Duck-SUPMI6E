@@ -2,11 +2,13 @@ import Blog from "./blog.js";
 
 var blogs_a = []; //array of blogs(class)
 var blogs_box = document.querySelector("#my_blogs");
+var searchbox = document.querySelector(".searchblog");
+
 
 async function get_blogs() {
   const res = await fetch("http://localhost:3000/api/blogs");
   const respJson = await res.json();
-
+ console.log(respJson);
   respJson.data.blogs.forEach((element) => {
     blogs_a.push(
       new Blog(
@@ -20,6 +22,17 @@ async function get_blogs() {
       )
     );
   });
+  function compare( a, b ) {
+    if ( a.date.getTime() > b.date.getTime() ){
+      return -1;
+    }
+    if ( a.date.getTime() < b.date.getTime() ){
+      return 1;
+    }
+    return 0;
+  }
+  
+  blogs_a.sort( compare );
 }
 
 async function renderblogs() {
@@ -54,3 +67,29 @@ window.onload = async () => {
     });
   }
 };
+
+searchbox.oninput = () =>{
+  console.log(searchbox.value);
+  var blog_display= document.querySelector("#my_blogs");
+  
+  blog_display.innerHTML="";
+  console.log(blogs_a);
+  var c = 0;
+  for (var i = 0; i < blogs_a.length; i++) {
+    if (
+      blogs_a[i].title
+        .toUpperCase()
+        .indexOf(searchbox.value.toUpperCase()) > -1 ) 
+        {
+            c++;
+
+            var blogel = blogs_a[i].getelement();
+            console.log(blogel);
+            blog_display.appendChild(blogel);
+
+    }
+  }
+  if (c === 0) {
+    blog_display.innerHTML = "<h2>...No Blogs found...</h2>";
+  }
+}
