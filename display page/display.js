@@ -14,7 +14,9 @@ async function get_blogs() {
         element.title,
         element.body,
         element.likes,
-        element.dislikes
+        element.dislikes,
+        element.image,
+        element.createdAt
       )
     );
   });
