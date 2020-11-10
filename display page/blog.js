@@ -160,6 +160,9 @@ export default class Blog {
     var btn1 = this.el.querySelector(".btn1");
     var slide = this.el.querySelector(".slide");
     var btn2 = this.el.querySelector(".btn2");
+    if(this.body.length<=500){
+      btn1.classList.add("hidden");
+    }
     btn1.onclick = () =>{
       btn1.classList.add("hidden");
       slide.classList.remove("hidden");
