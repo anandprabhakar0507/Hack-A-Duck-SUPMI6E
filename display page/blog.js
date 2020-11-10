@@ -30,7 +30,7 @@ export default class Blog {
                     <div class="blog-img"><img src="fort_collins_winter.jpg"></div>
 
                     <div class="blog-body">
-                    <p class="line">${body}</p>
+                    <p class="line">${body.substring(0,500)}<span class="btn1"><button class="btn btn-link"> ....Read More</button></span><span class="slide hidden">${body.substring(500,body.length)}</span><span class="btn2 hidden"><button class="btn btn-link">Read Less</button></span></p>
                     </div>
 
                     <div class="blog-likes">
@@ -113,6 +113,19 @@ export default class Blog {
         method: "DELETE",
       });
       location.reload();
+    };
+    var btn1 = this.el.querySelector(".btn1");
+    var slide = this.el.querySelector(".slide");
+    var btn2 = this.el.querySelector(".btn2");
+    btn1.onclick = () =>{
+      btn1.classList.add("hidden");
+      slide.classList.remove("hidden");
+      btn2.classList.remove("hidden");
+    };
+    btn2.onclick = () =>{
+      btn1.classList.remove("hidden");
+      slide.classList.add("hidden");
+      btn2.classList.add("hidden");
     };
   }
 }

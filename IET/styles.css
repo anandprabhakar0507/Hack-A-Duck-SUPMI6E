@@ -249,8 +249,9 @@ body {
   color: black;
   font-weight: bolder;
   text-decoration: none;
-  font-size: 1.5vw;
+  font-size: 1.55vw;
   position: absolute;
+  text-align: left;
   top:6vw;
   right: 25vw;
   left: 55vw;
