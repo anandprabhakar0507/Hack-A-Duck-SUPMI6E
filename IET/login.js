@@ -18,8 +18,8 @@ document.querySelector(".login-form").onsubmit = async function (e) {
     });
     const respJSON = await resp.json();
     if (respJSON.status === "success" && respJSON.token) {
-      window.location.href = "../display page/display_html.html";
       localStorage.setItem("loggedIn", true);
+      window.location.href = "../display page/display_html.html";
     }
     console.log(respJSON);
   } catch (error) {
@@ -29,6 +29,7 @@ document.querySelector(".login-form").onsubmit = async function (e) {
 
 window.onload = () => {
   const isLoggeddIn = localStorage.getItem("loggedIn");
+  console.log(isLoggeddIn);
   const logoutBtn = document.querySelector(".logout-btn");
   const loginBtn = document.querySelector(".dropleft");
   if (isLoggeddIn === "true") {

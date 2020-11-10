@@ -17,6 +17,9 @@ document.querySelector(".compose-form").onsubmit = async function (e) {
       credentials: "include",
     });
     const resJSON = await res.json();
+    if(resJSON.status=="success"){
+      window.location.href = "/display page/display_html.html";
+    }
     console.log(resJSON);
     console.log(title, body, file);
   } catch (error) {

@@ -247,8 +247,10 @@
 .line{
     white-space: pre-wrap;
 }
-
-
+.btn-link{
+  display: inline;
+  font-weight: bold;
+}
 
 /* footer */
 footer {
