@@ -211,15 +211,30 @@
     <section id="about">
       <div class="aboutpage">
         <div class="abouttextright">
-          <p>
-            This is a must have page for almost all websites on the internet.
-            You can name this page “About Us” or “About Me” depending on whether
-            you have a business blog or a single-author personal blog. You can
-            use this page to tell users about people behind the website, its
-            purpose, mission, values, and what users should expect to find on
-            your blog. The about page helps build trust among your audience as
-            they get to know the real people behind the scenes.
-          </p>
+          <p id="demo"></p>
+          <script>
+            var i = 0;
+            var text = "This is basically a blogging site that provides a platform to the admin to connect to the world through his/her blogs. Alternatively , it allows every user who loves blogs to witness the World , as penned down by the admin. So tighten your seat belts and get ready to explore the world through the eyes of the admin . Still dubious? just hit ENTER and find youself. See you on the other side ! ";
+            
+            
+            
+            
+            
+            
+                        
+            var speed = 70;
+            
+            function typeWriter() {
+              if (i < text.length) {
+                document.getElementById("demo").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+              }
+            }
+          
+                typeWriter();
+            
+            </script>
         </div>
         <div class="abouttextleft">
           <p class="aboutWeb">About The Website</p>
@@ -245,7 +260,7 @@
           <div class="container101">
             <img
               class="mySlides w3-animate-fading"
-              src="images/wildlife.png"
+              src="images/wildlife4.png"
               style="width: 100%"
             />
             <div class="overlay101">WILDLIFE</div>
@@ -253,11 +268,48 @@
           <div class="container101">
             <img
               class="mySlides w3-animate-fading"
-              src="images/politics.png"
+              src="images/politics3.png"
               style="width: 100%"
             />
             <div class="overlay101">POLITICS</div>
           </div>
+          <div class="container101">
+            <img
+              class="mySlides w3-animate-fading"
+              src="images/stocks.png"
+              style="width: 100%"
+            />
+            <div class="overlay101">STOCK MARKET</div>
+          </div>
+
+          <div class="container101">
+            <img
+              class="mySlides w3-animate-fading"
+              src="images/sports.png"
+              style="width: 100%"
+            />
+            <div class="overlay101">SPORTS</div>
+          </div>
+
+          <div class="container101">
+            <img
+              class="mySlides w3-animate-fading"
+              src="images/enter.png"
+              style="width: 100%"
+            />
+            <div class="overlay101">ENTERTAINMENT</div>
+          </div>
+
+          <div class="container101">
+            <img
+              class="mySlides w3-animate-fading"
+              src="images/education.png"
+              style="width: 100%"
+            />
+            <div class="overlay101">EDUCATIONAL</div>
+          </div>
+        </div>
+
         </div>
         <script src="func2.js"></script>
       </div>
@@ -299,22 +351,22 @@
         <div class="scrolledit">
           <div class="mySlides2 container-fluid">
             <h1 class="slideHeading">
-              <b>I AM THE BEGINNING , I AM THE END !</b>
+              <b>" I hope you all had fun traversing the site . HAPPY BLOGGING ! "</b>
             </h1>
           </div>
           <div class="mySlides2">
             <h1 class="slideHeading container-fluid">
-              <b>THERE'S NOTHING BETTER THAN GERMAN EFFICIENCY !</b>
+              <b>" HI everyone , I sincerely hope our work was as fascinating to you all surfing as it was to us building ! "</b>
             </h1>
           </div>
           <div class="mySlides2">
             <h1 class="slideHeading container-fluid">
-              <b>YOU DONT'T EVEN KNOW HOW HEARTLESS I AM !</b>
+              <b>" Press ENTER now , if not done already , waiting for your reviews and suggestions ! "</b>
             </h1>
           </div>
           <div class="mySlides2">
             <h1 class="slideHeading container-fluid">
-              <b>I KNOW EXACTYLY WHERE YOU ARE HIDING !</b>
+              <b>" Really excited to hear from you all ! Hope you all found the site interesting ! "</b>
             </h1>
           </div>
         </div>
