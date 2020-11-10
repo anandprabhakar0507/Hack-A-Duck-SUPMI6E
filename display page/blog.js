@@ -7,7 +7,7 @@ export default class Blog {
     this.likes = likes;
     this.dislikes = dislikes;
     this.image = image;
-    this.date = date;
+    this.date = new Date(date);
   }
   getelement() {
     var temp = this.gettemplate(
@@ -31,7 +31,7 @@ export default class Blog {
                 <div class="my_blog">
                     <div class="blog-title"> ${title}</div>
 
-                    <div class="blog-titlebar">Posted on : ${date.substring(0,10)}</div>
+                    <div class="blog-titlebar">Posted on : ${date}</div>
 
                     <div class="blog-img"><img src="/bLOG-BACKEND/img/${image}"></div>
 
@@ -66,7 +66,7 @@ export default class Blog {
                 <div class="my_blog">
                     <div class="blog-title"> ${title}</div>
 
-                    <div class="blog-titlebar">Posted on : ${date.substring(0,10)}</div>
+                    <div class="blog-titlebar">Posted on : ${date}</div>
 
                     <div class="blog-img"></div>
 
