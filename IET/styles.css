@@ -6,6 +6,7 @@
 }
 
 
+
  
 /* configuring the moving handle */
 ::-webkit-scrollbar-thumb {
@@ -26,6 +27,11 @@
 }
 
 /* scrollbar customisation ends here */
+
+/*class for hiding things*/
+.hidden{
+  display: none;
+}
 
 .navbar {
   background-color: #2c2222;

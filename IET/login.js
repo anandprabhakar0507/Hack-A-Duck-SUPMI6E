@@ -17,11 +17,37 @@ document.querySelector(".login-form").onsubmit = async function (e) {
       mode: "cors",
     });
     const respJSON = await resp.json();
-    if(respJSON.status==="success" && respJSON.token){
-      window.location.href = "../display page/display_html.html"
+    if (respJSON.status === "success" && respJSON.token) {
+      window.location.href = "../display page/display_html.html";
+      localStorage.setItem("loggedIn", true);
     }
     console.log(respJSON);
   } catch (error) {
     console.log(error.message);
+  }
+};
+
+window.onload = () => {
+  const isLoggeddIn = localStorage.getItem("loggedIn");
+  const logoutBtn = document.querySelector(".logout-btn");
+  const loginBtn = document.querySelector(".dropleft");
+  if (isLoggeddIn === "true") {
+    loginBtn.classList.add("hidden");
+    logoutBtn.classList.remove("hidden");
+  } else {
+    loginBtn.classList.remove("hidden");
+    logoutBtn.classList.add("hidden");
+  }
+};
+
+document.querySelector(".logout-btn").onclick = async () => {
+  const res = await fetch("http://localhost:3000/api/users/logout", {
+    method: "POST",
+    credentials: "include",
+  });
+  const resJSON = await res.json();
+  if(resJSON.status ==="success"){
+    localStorage.setItem("loggedIn",false);
+    location.reload();
   }
 };
