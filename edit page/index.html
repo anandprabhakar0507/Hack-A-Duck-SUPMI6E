@@ -99,15 +99,16 @@
         >
           ADMIN
         </button>
-        <form class="dropdown-menu p-4">
+        <!-- <form class="dropdown-menu p-4">
           <p class="signIn">
             Welcome Admin!<br />You are logged in, Happy Blogging!
           </p>
-        </form>
-        <!-- <form class="dropdown-menu p-4">
+        </form> -->
+        <form class="dropdown-menu p-4 login-form">
           <div class="form-group">
             <label for="exampleDropdownFormEmail2">Email address</label>
             <input
+              name="email"
               type="email"
               class="form-control"
               id="exampleDropdownFormEmail2"
@@ -117,6 +118,7 @@
           <div class="form-group">
             <label for="exampleDropdownFormPassword2">Password</label>
             <input
+              name="password"
               type="password"
               class="form-control"
               id="exampleDropdownFormPassword2"
@@ -136,8 +138,11 @@
           <form action="/admin">
             <button type="submit" class="btn btn-danger">Sign in</button>
           </form>
-        </form> -->
+        </form>
       </div>
+      <button type="submit" class="logout-btn hidden btn btn-danger">
+        Logout
+      </button>
     </div>
   </nav>
 
@@ -154,8 +159,8 @@
           name="title"
           autocomplete="off"
         />
-          <!-- default value  -->
-       <label class="composeTitle">Post</label>
+        <!-- default value  -->
+        <label class="composeTitle">Post</label>
         <textarea
           name="body"
           class="form-control blog-body"
@@ -169,6 +174,7 @@
       </form>
     </div>
     <script src="./edit.js"></script>
+    <script src="../IET//login.js"></script>
   </body>
   <!-- FOOTER -->
   <footer id="footer">

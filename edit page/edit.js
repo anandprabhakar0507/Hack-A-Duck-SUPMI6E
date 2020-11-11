@@ -3,6 +3,17 @@ window.onload = () => {
   const body = localStorage.getItem("blog-body");
   document.querySelector(".blog-title").value = title;
   document.querySelector(".blog-body").value = body;
+  const isLoggeddIn = localStorage.getItem("loggedIn");
+  console.log(isLoggeddIn);
+  const logoutBtn = document.querySelector(".logout-btn");
+  const loginBtn = document.querySelector(".dropleft");
+  if (isLoggeddIn === "true") {
+    loginBtn.classList.add("hidden");
+    logoutBtn.classList.remove("hidden");
+  } else {
+    loginBtn.classList.remove("hidden");
+    logoutBtn.classList.add("hidden");
+  }
 };
 
 document.querySelector(".edit-form").onsubmit = async (e) => {

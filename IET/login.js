@@ -27,28 +27,14 @@ document.querySelector(".login-form").onsubmit = async function (e) {
   }
 };
 
-window.onload = () => {
-  const isLoggeddIn = localStorage.getItem("loggedIn");
-  console.log(isLoggeddIn);
-  const logoutBtn = document.querySelector(".logout-btn");
-  const loginBtn = document.querySelector(".dropleft");
-  if (isLoggeddIn === "true") {
-    loginBtn.classList.add("hidden");
-    logoutBtn.classList.remove("hidden");
-  } else {
-    loginBtn.classList.remove("hidden");
-    logoutBtn.classList.add("hidden");
-  }
-};
-
 document.querySelector(".logout-btn").onclick = async () => {
   const res = await fetch("http://localhost:3000/api/users/logout", {
     method: "POST",
     credentials: "include",
   });
   const resJSON = await res.json();
-  if(resJSON.status ==="success"){
-    localStorage.setItem("loggedIn",false);
-    location.reload();
+  if (resJSON.status === "success") {
+    localStorage.setItem("loggedIn", false);
+    window.location.href = "/IET/index.html";
   }
 };

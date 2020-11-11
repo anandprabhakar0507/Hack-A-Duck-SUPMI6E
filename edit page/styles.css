@@ -1,3 +1,6 @@
+.hidden{
+  display: none;
+}
 .navbar {
   background-color: #2c2222;
 }
