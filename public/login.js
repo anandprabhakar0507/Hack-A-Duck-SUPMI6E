@@ -21,7 +21,15 @@ document.querySelector('.login-form').onsubmit = async function (e) {
     if (respJSON.status === 'success' && respJSON.token) {
       localStorage.setItem('loggedIn', true);
       alert('Successfully Logged in');
-      window.location.href = './display page/display_html.html';
+      const directoryArray = window.location.href.split('/');
+      const lastDirectory = directoryArray[directoryArray.length - 2];
+      if (
+        lastDirectory.startsWith('display')
+      ) {
+        window.location.href = './index.html';
+      } else {
+        window.location.href = './display page/display_html.html';
+      }
     } else {
       throw new Error(respJSON.message);
     }
