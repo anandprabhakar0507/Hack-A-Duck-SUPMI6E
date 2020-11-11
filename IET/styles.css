@@ -444,7 +444,15 @@ body {
   padding-left:5px;
   
 }
-
+.socialHead{
+  font-size: 1.5vw;
+}
+.social{
+  margin-top: 2.5vw;
+}
+.socialIcon{
+  padding: 0 1vw;
+}
 /* FOOTER */
 footer {
   padding: 2% 35% 2px 35%;
@@ -477,12 +485,12 @@ h3 {
 }
 
 .fa {
-  padding: 20px;
-  font-size: 20px;
-  width: 60px;
+  width: 3vw;
+  font-size: 1vw;
+  padding: 1vw;
   text-align: center;
   text-decoration: none;
-  border-radius: 50%;
+  border-radius: 100%;
 }
 
 .fa:hover {
@@ -490,32 +498,10 @@ h3 {
   color: #2c2222;
 }
 
-.fa-linkedin {
-  background: wheat;
-  color: white;
-}
-
-.fa-yahoo {
-  background: wheat;
-  color: #2c2222;
-}
-
-.fa-facebook {
-  background: wheat;
-  color: #2c2222;
-}
-
-.fa-twitter {
-  background: wheat;
-  color: #2c2222;
-}
-
-.fa-google {
-  background: wheat;
-  color: #2c2222;
-}
-
-.fa-instagram {
+.x1 {
+  font-size: 20px;
+  width: 60px;
+  padding: 20px;
   background: wheat;
   color: #2c2222;
 }
