@@ -18,6 +18,7 @@ document.querySelector('.compose-form').onsubmit = async function (e) {
       credentials: 'include',
     });
     const resJSON = await res.json();
+    console.log(resJSON);
     if (resJSON.status == 'success') {
       alert('Your Post has been published!!');
       window.location.href = '../display page/display_html.html';
@@ -27,7 +28,7 @@ document.querySelector('.compose-form').onsubmit = async function (e) {
     console.log(resJSON);
     console.log(title, body, file);
   } catch (error) {
-    alert(error.message);
+    alert(error);
   }
 };
 
