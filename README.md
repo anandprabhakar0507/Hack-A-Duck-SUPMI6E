@@ -2,7 +2,12 @@
 
 HACK A DUCK -THEME 4(BLog website)
 
-Team Name- SUPMI6E
-Link - https://utkrisht3108.github.io/Hack-A-Duck-SUPMI6E/IET/index.html
+website link- https://my-friends-blog.herokuapp.com/
 
-Site in progress
+Team Name- SUPMI6E
+
+Team Participants-
+1. Utkrisht Sharma
+2. Sanchit Gupta
+3. Pranav Sharma
+4. Mayank Upadhyaya
