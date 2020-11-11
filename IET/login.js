@@ -21,10 +21,9 @@ document.querySelector(".login-form").onsubmit = async function (e) {
       localStorage.setItem("loggedIn", true);
       alert("Successfully Logged in");
       window.location.href = "../display page/display_html.html";
-    }
-    else{
+    } else {
       throw new Error(respJSON.message);
-     }
+    }
     console.log(respJSON);
   } catch (error) {
     alert(error.message);
@@ -37,9 +36,9 @@ document.querySelector(".logout-btn").onclick = async () => {
     credentials: "include",
   });
   const resJSON = await res.json();
-  if(resJSON.status ==="success"){
-    localStorage.setItem("loggedIn",false);
+  if (resJSON.status === "success") {
+    localStorage.setItem("loggedIn", false);
     alert("Successfully Logged out");
-    location.reload();
+    window.location.href = "/IET/index.html";
   }
 };
