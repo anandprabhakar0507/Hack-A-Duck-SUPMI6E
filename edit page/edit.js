@@ -39,10 +39,11 @@ document.querySelector(".edit-form").onsubmit = async (e) => {
       localStorage.setItem("blog-title", "");
       localStorage.setItem("blog-body", "");
       localStorage.setItem("blog-id", "");
+      alert("Your Post has been edited!!");
       window.location.href = "/display page/display_html.html";
     }
     console.log(resJson);
   } catch (error) {
-    console.log(error.message);
+    alert(error.message);
   }
 };

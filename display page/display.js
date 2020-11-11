@@ -77,6 +77,7 @@ searchbox.oninput = () => {
   for (var i = 0; i < blogs_a.length; i++) {
     if (
       blogs_a[i].title.toUpperCase().indexOf(searchbox.value.toUpperCase()) > -1
+      ||  blogs_a[i].body.toUpperCase().indexOf(searchbox.value.toUpperCase()) > -1
     ) {
       c++;
 

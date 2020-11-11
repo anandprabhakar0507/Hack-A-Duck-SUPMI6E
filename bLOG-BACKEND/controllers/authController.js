@@ -40,7 +40,7 @@ module.exports = {
     }
     const user = await User.findOne({ email: email }).select('+password');
     if (!user || !(await user.checkPassword(password, user.password))) {
-      throw new Error('Aisa to koi hai hi nahi galat email ya pass daala hai');
+      throw new Error('Incorrect e-mail or password!!');
     }
     const token = generateToken(user._id);
     res.cookie('token', token, {
@@ -66,7 +66,7 @@ module.exports = {
       token = req.cookies.token;
     }
     if (!token) {
-      throw new Error('Token to hai hi nahi');
+      throw new Error('Not Authorised');
     }
     const decodedJWT = await util.promisify(jwt.verify)(
       token,
@@ -74,10 +74,10 @@ module.exports = {
     );
     const user = await User.findById(decodedJWT.id);
     if (!user) {
-      throw new Error('Aisa to koi user hai hi nahi');
+      throw new Error('User account deleted after token issue');
     }
     if (user.checkPasswordChange(decodedJWT.iat)) {
-      throw new Error('Iss token ke baad password change kr liya tha');
+      throw new Error('Password changed after token issue. Enter updated password');
     }
 
     next();

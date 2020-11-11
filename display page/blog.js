@@ -157,6 +157,7 @@ export default class Blog {
         method: "DELETE",
       });
       location.reload();
+      alert("!!Your Post has been deleted!!");
     };
     var btn1 = this.el.querySelector(".btn1");
     var slide = this.el.querySelector(".slide");

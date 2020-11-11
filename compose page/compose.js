@@ -17,13 +17,14 @@ document.querySelector(".compose-form").onsubmit = async function (e) {
       credentials: "include",
     });
     const resJSON = await res.json();
-    if (resJSON.status == "success") {
+    if(resJSON.status=="success"){
+      alert("Your Post has been published!!");
       window.location.href = "/display page/display_html.html";
     }
     console.log(resJSON);
     console.log(title, body, file);
   } catch (error) {
-    console.log(error.message);
+      alert(error.message);
   }
 };
 

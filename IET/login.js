@@ -19,11 +19,15 @@ document.querySelector(".login-form").onsubmit = async function (e) {
     const respJSON = await resp.json();
     if (respJSON.status === "success" && respJSON.token) {
       localStorage.setItem("loggedIn", true);
+      alert("Successfully Logged in");
       window.location.href = "../display page/display_html.html";
     }
+    else{
+      throw new Error(respJSON.message);
+     }
     console.log(respJSON);
   } catch (error) {
-    console.log(error.message);
+    alert(error.message);
   }
 };
 
@@ -33,8 +37,9 @@ document.querySelector(".logout-btn").onclick = async () => {
     credentials: "include",
   });
   const resJSON = await res.json();
-  if (resJSON.status === "success") {
-    localStorage.setItem("loggedIn", false);
-    window.location.href = "/IET/index.html";
+  if(resJSON.status ==="success"){
+    localStorage.setItem("loggedIn",false);
+    alert("Successfully Logged out");
+    location.reload();
   }
 };
