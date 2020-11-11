@@ -5,34 +5,42 @@ var blogs_box = document.querySelector("#my_blogs");
 var searchbox = document.querySelector(".searchblog");
 
 async function get_blogs() {
-  const res = await fetch("http://localhost:3000/api/blogs");
-  const respJson = await res.json();
-  console.log(respJson);
-  respJson.data.blogs.forEach((element) => {
-    blogs_a.push(
-      new Blog(
-        element._id,
-        element.title,
-        element.body,
-        element.likes,
-        element.dislikes,
-        element.image,
-        element.createdAt
-      )
-    );
-  });
-  function compare(a, b) {
-    if (a.date.getTime() > b.date.getTime()) {
-      return -1;
+  try {
+    const res = await fetch("http://localhost:3000/api/blogs");
+    const respJson = await res.json();
+    console.log(respJson);
+    if (respJson.status === "error") {
+      throw new Error(respJSON.message);
     }
-    if (a.date.getTime() < b.date.getTime()) {
-      return 1;
+    respJson.data.blogs.forEach((element) => {
+      blogs_a.push(
+        new Blog(
+          element._id,
+          element.title,
+          element.body,
+          element.likes,
+          element.dislikes,
+          element.image,
+          element.createdAt
+        )
+      );
+    });
+    function compare(a, b) {
+      if (a.date.getTime() > b.date.getTime()) {
+        return -1;
+      }
+      if (a.date.getTime() < b.date.getTime()) {
+        return 1;
+      }
+      return 0;
     }
-    return 0;
-  }
 
-  blogs_a.sort(compare);
+    blogs_a.sort(compare);
+  } catch (error) {
+    alert(error.message);
+  }
 }
+
 
 async function renderblogs() {
   await get_blogs();
@@ -76,8 +84,9 @@ searchbox.oninput = () => {
   var c = 0;
   for (var i = 0; i < blogs_a.length; i++) {
     if (
-      blogs_a[i].title.toUpperCase().indexOf(searchbox.value.toUpperCase()) > -1
-      ||  blogs_a[i].body.toUpperCase().indexOf(searchbox.value.toUpperCase()) > -1
+      blogs_a[i].title.toUpperCase().indexOf(searchbox.value.toUpperCase()) >
+        -1 ||
+      blogs_a[i].body.toUpperCase().indexOf(searchbox.value.toUpperCase()) > -1
     ) {
       c++;
 

@@ -1,5 +1,5 @@
 export default class Blog {
-  constructor(id, title, body, likes, dislikes,image,date) {
+  constructor(id, title, body, likes, dislikes, image, date) {
     this.id = id;
     this.title = title;
     this.body = body;
@@ -24,10 +24,9 @@ export default class Blog {
     this.eventlisteners();
     return this.el;
   }
-  gettemplate(title, body, likes, dislikes,image,date) {
-    if(image!="undefined"){
-
-    return `
+  gettemplate(title, body, likes, dislikes, image, date) {
+    if (image != "undefined") {
+      return `
                 <div class="my_blog">
                     <div class="blog-title"> ${title}</div>
 
@@ -36,7 +35,13 @@ export default class Blog {
                     <div class="blog-img"><img src="/bLOG-BACKEND/img/${image}"></div>
 
                     <div class="blog-body">
-                    <p class="line">${body.substring(0,500)}<span class="btn1"><button class="btn btn-link"> ....Read More</button></span><span class="slide hidden">${body.substring(500,body.length)}</span><span class="btn2 hidden"><button class="btn btn-link">Read Less</button></span></p>
+                    <p class="line">${body.substring(
+                      0,
+                      500
+                    )}<span class="btn1"><button class="btn btn-link"> ....Read More</button></span><span class="slide hidden">${body.substring(
+        500,
+        body.length
+      )}</span><span class="btn2 hidden"><button class="btn btn-link">Read Less</button></span></p>
                     </div>
 
                     <div class="blog-likes">
@@ -60,8 +65,7 @@ export default class Blog {
                     <hr class="hr">
                 </div>
       `;
-    }
-    else{
+    } else {
       return `
                 <div class="my_blog">
                     <div class="blog-title"> ${title}</div>
@@ -71,7 +75,13 @@ export default class Blog {
                     <div class="blog-img"></div>
 
                     <div class="blog-body">
-                    <p class="line">${body.substring(0,500)}<span class="btn1"><button class="btn btn-link"> ....Read More</button></span><span class="slide hidden">${body.substring(500,body.length)}</span><span class="btn2 hidden"><button class="btn btn-link">Read Less</button></span></p>
+                    <p class="line">${body.substring(
+                      0,
+                      500
+                    )}<span class="btn1"><button class="btn btn-link"> ....Read More</button></span><span class="slide hidden">${body.substring(
+        500,
+        body.length
+      )}</span><span class="btn2 hidden"><button class="btn btn-link">Read Less</button></span></p>
                     </div>
 
                     <div class="blog-likes">
@@ -95,7 +105,6 @@ export default class Blog {
                     <hr class="hr">
                 </div>
       `;
-    
     }
   }
   eventlisteners() {
@@ -153,33 +162,42 @@ export default class Blog {
       }
     };
     deleteBtn.onclick = async () => {
-      const res = await fetch(`http://localhost:3000/api/blogs/${this.id}`, {
-        method: "DELETE",
-      });
-      location.reload();
-      alert("!!Your Post has been deleted!!");
+      try {
+        const res = await fetch(`http://localhost:3000/api/blogs/${this.id}`, {
+          method: "DELETE",
+        });
+        const resJson = await res.json();
+        if (resJson.status === "success") {
+          location.reload();
+          alert("!!Your Post has been deleted!!");
+        } else {
+          throw new Error(resJson.message);
+        }
+      } catch (error) {
+        alert(error.message);
+      }
     };
     var btn1 = this.el.querySelector(".btn1");
     var slide = this.el.querySelector(".slide");
     var btn2 = this.el.querySelector(".btn2");
-    if(this.body.length<=500){
+    if (this.body.length <= 500) {
       btn1.classList.add("hidden");
     }
-    btn1.onclick = () =>{
+    btn1.onclick = () => {
       btn1.classList.add("hidden");
       slide.classList.remove("hidden");
       btn2.classList.remove("hidden");
     };
-    btn2.onclick = () =>{
+    btn2.onclick = () => {
       btn1.classList.remove("hidden");
       slide.classList.add("hidden");
       btn2.classList.add("hidden");
     };
-    editBtn.onclick = ()=>{
-      localStorage.setItem("blog-title",this.title);
-      localStorage.setItem("blog-body",this.body);
-      localStorage.setItem("blog-id",this.id);
-      window.location.href = "/edit page/index.html"
-    }
+    editBtn.onclick = () => {
+      localStorage.setItem("blog-title", this.title);
+      localStorage.setItem("blog-body", this.body);
+      localStorage.setItem("blog-id", this.id);
+      window.location.href = "/edit page/index.html";
+    };
   }
 }
