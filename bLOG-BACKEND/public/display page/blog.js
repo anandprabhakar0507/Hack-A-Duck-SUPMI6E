@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default class Blog {
   constructor(id, title, body, likes, dislikes, image, date) {
     this.id = id;
@@ -18,21 +19,21 @@ export default class Blog {
       this.image,
       this.date
     );
-    var temp_div = document.createElement("div");
+    var temp_div = document.createElement('div');
     temp_div.innerHTML = temp;
     this.el = temp_div.children[0];
     this.eventlisteners();
     return this.el;
   }
   gettemplate(title, body, likes, dislikes, image, date) {
-    if (image != "undefined") {
+    if (image != 'undefined') {
       return `
                 <div class="my_blog">
                     <div class="blog-title"> ${title}</div>
 
                     <div class="blog-titlebar">Posted on : ${date}</div>
 
-                    <div class="blog-img"><img src="/bLOG-BACKEND/img/${image}"></div>
+                    <div class="blog-img"><img src="../../img/${image}"></div>
 
                     <div class="blog-body">
                     <p class="line">${body.substring(
@@ -108,10 +109,10 @@ export default class Blog {
     }
   }
   eventlisteners() {
-    const likebtn = this.el.querySelector(".like-button");
-    const deleteBtn = this.el.querySelector(".delete-button");
-    const editBtn = this.el.querySelector(".edit-button");
-    var like_count = this.el.querySelector(".like-count");
+    const likebtn = this.el.querySelector('.like-button');
+    const deleteBtn = this.el.querySelector('.delete-button');
+    const editBtn = this.el.querySelector('.edit-button');
+    var like_count = this.el.querySelector('.like-count');
     var liked = 0;
 
     likebtn.onclick = () => {
@@ -128,11 +129,11 @@ export default class Blog {
       }
       console.log(likecnt);
 
-      console.log("lol");
+      console.log('lol');
     };
 
-    const dislikebtn = this.el.querySelector(".dislike-button");
-    var dislike_count = this.el.querySelector(".dislike-count");
+    const dislikebtn = this.el.querySelector('.dislike-button');
+    var dislike_count = this.el.querySelector('.dislike-count');
     var disliked = 0;
 
     dislikebtn.onclick = () => {
@@ -149,27 +150,27 @@ export default class Blog {
       }
       console.log(dislikecnt);
 
-      console.log("lol");
+      console.log('lol');
     };
 
-    const postbutton = this.el.querySelector(".post");
-    var comment_in = this.el.querySelector(".comment_in");
+    const postbutton = this.el.querySelector('.post');
+    var comment_in = this.el.querySelector('.comment_in');
     postbutton.onclick = () => {
       if (comment_in.value != null) {
         console.log(comment_in.value);
       } else {
-        console.log("error");
+        console.log('error');
       }
     };
     deleteBtn.onclick = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/api/blogs/${this.id}`, {
-          method: "DELETE",
+        const res = await fetch(`/api/blogs/${this.id}`, {
+          method: 'DELETE',
         });
         const resJson = await res.json();
-        if (resJson.status === "success") {
+        if (resJson.status === 'success') {
           location.reload();
-          alert("!!Your Post has been deleted!!");
+          alert('!!Your Post has been deleted!!');
         } else {
           throw new Error(resJson.message);
         }
@@ -177,27 +178,27 @@ export default class Blog {
         alert(error.message);
       }
     };
-    var btn1 = this.el.querySelector(".btn1");
-    var slide = this.el.querySelector(".slide");
-    var btn2 = this.el.querySelector(".btn2");
+    var btn1 = this.el.querySelector('.btn1');
+    var slide = this.el.querySelector('.slide');
+    var btn2 = this.el.querySelector('.btn2');
     if (this.body.length <= 500) {
-      btn1.classList.add("hidden");
+      btn1.classList.add('hidden');
     }
     btn1.onclick = () => {
-      btn1.classList.add("hidden");
-      slide.classList.remove("hidden");
-      btn2.classList.remove("hidden");
+      btn1.classList.add('hidden');
+      slide.classList.remove('hidden');
+      btn2.classList.remove('hidden');
     };
     btn2.onclick = () => {
-      btn1.classList.remove("hidden");
-      slide.classList.add("hidden");
-      btn2.classList.add("hidden");
+      btn1.classList.remove('hidden');
+      slide.classList.add('hidden');
+      btn2.classList.add('hidden');
     };
     editBtn.onclick = () => {
-      localStorage.setItem("blog-title", this.title);
-      localStorage.setItem("blog-body", this.body);
-      localStorage.setItem("blog-id", this.id);
-      window.location.href = "/edit page/index.html";
+      localStorage.setItem('blog-title', this.title);
+      localStorage.setItem('blog-body', this.body);
+      localStorage.setItem('blog-id', this.id);
+      window.location.href = '../edit page/index.html';
     };
   }
 }

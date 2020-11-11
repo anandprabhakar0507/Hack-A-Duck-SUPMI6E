@@ -24,6 +24,7 @@ module.exports = {
         Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
       ),
       httpOnly: true,
+      secure: true,
     });
     res.status(201).json({
       status: 'success',
@@ -48,6 +49,7 @@ module.exports = {
         Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
       ),
       httpOnly: true,
+      secure: true,
     });
     res.status(200).json({
       status: 'success',
@@ -77,7 +79,9 @@ module.exports = {
       throw new Error('User account deleted after token issue');
     }
     if (user.checkPasswordChange(decodedJWT.iat)) {
-      throw new Error('Password changed after token issue. Enter updated password');
+      throw new Error(
+        'Password changed after token issue. Enter updated password'
+      );
     }
 
     next();
@@ -88,6 +92,7 @@ module.exports = {
         Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
       ),
       httpOnly: true,
+      secure: true,
     });
     res.status(200).json({ status: 'success' });
   },

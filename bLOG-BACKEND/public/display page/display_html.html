@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!--Header copy paste part -->
+
     <title>My Friend's Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/eec8b92df6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
     <!-- Google Fonts  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rock+Salt&family=Vampiro+One&family=Yesteryear&display=swap"
       rel="stylesheet"
@@ -26,6 +45,10 @@
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Delius&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Volkhov&display=swap"
       rel="stylesheet"
     />
     <link
@@ -61,12 +84,12 @@
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="display.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   </head>
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand upar" href="/IET/index.html">My Friend's Blog</a>
+    <a class="navbar-brand upar" href="../index.html">My Friend's Blog</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -81,10 +104,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link upar" href="/IET/index.html#about">About</a>
+          <a class="nav-link upar" href="../index.html#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link upar" href="/IET/index.html#develop">Developers</a>
+          <a class="nav-link upar" href="../index.html#develop">Developers</a>
         </li>
         <li class="nav-item">
           <a class="nav-link thoda upar" href="#footer">Contact Us</a>
@@ -99,11 +122,6 @@
         >
           ADMIN
         </button>
-        <!-- <form class="dropdown-menu p-4">
-          <p class="signIn">
-            Welcome Admin!<br />You are logged in, Happy Blogging!
-          </p>
-        </form> -->
         <form class="dropdown-menu p-4 login-form">
           <div class="form-group">
             <label for="exampleDropdownFormEmail2">Email address</label>
@@ -135,9 +153,7 @@
               Remember me
             </label>
           </div>
-          <form action="/admin">
-            <button type="submit" class="btn btn-danger">Sign in</button>
-          </form>
+          <button type="submit" class="btn btn-danger">Sign in</button>
         </form>
       </div>
       <button type="submit" class="logout-btn hidden btn btn-danger">
@@ -145,37 +161,58 @@
       </button>
     </div>
   </nav>
-
-  <!-- Body start ho rha hai -->
+  <!-- copy paste ends here -->
 
   <body>
-    <div class="container">
-      <h1 class="compose">Edit Blog</h1>
-      <form class="edit-form">
-        <label class="composeTitle">Title</label>
-        <input
-          type="text"
-          class="form-control blog-title"
-          name="title"
-          autocomplete="off"
-        />
-        <!-- default value  -->
-        <label class="composeTitle">Post</label>
-        <textarea
-          name="body"
-          class="form-control blog-body"
-          id="textarea"
-          cols="150%"
-          rows="10%"
-        ></textarea>
-        <label class="composeImg" for="">Chose Image</label>
-        <input type="file" id="img" name="file" />
-        <button type="submit" class="btn btn-primary">Publish</button>
-      </form>
+    <div class="scroll">
+      <marquee class="scrollFont" behaviour="scroll" direction="left">
+        <b><i>New Blog up! Do check it out!!</i></b>
+      </marquee>
     </div>
-    <script src="./edit.js"></script>
-    <script src="../IET//login.js"></script>
+    <div id="blogs_display">
+      <input
+        class="searchblog"
+        type="text"
+        placeholder="Search here............."
+      />
+      <div id="blog-add">
+        <a href="../compose page/index.html"><button>Add New Post</button></a>
+      </div>
+      <div id="my_blogs">
+        <!-- <div class="my_blog">
+
+                    <div class="blog-title"> Hello hello</div>
+
+                    <div class="blog-titlebar">Posted on : 12/09/2020</div>
+
+                    <div class="blog-img"><img src="fort_collins_winter.jpg"></div>
+
+                    <div class="blog-body"> la la ala la ala la ala la ala ala l al ala ala al ala
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum    
+                    </div>
+
+                    <div class="blog-likes">
+                        <button class="like-button"><img src="images.png"></button>
+                        123</div>
+                    
+                    <div class="blog-comments">
+                        <h5>Comments</h5>
+                        <div class="comment">
+                              ye kya bavasir bana diye ho
+                        </div>
+                        <input type="text" class="comment_in"> 
+                        <button class="post">Post</button> 
+                    </div>
+                </div> -->
+      </div>
+    </div>
+    <script type="module" src="display.js"></script>
+    <script type="module" src="blog.js"></script>
+    <script src="../login.js"></script>
   </body>
+
+  <!-- copy paste starts -->
   <!-- FOOTER -->
   <footer id="footer">
     <h3>Contact Us</h3>
