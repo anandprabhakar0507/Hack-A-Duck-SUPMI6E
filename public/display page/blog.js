@@ -33,7 +33,7 @@ export default class Blog {
 
                     <div class="blog-titlebar">Posted on : ${date}</div>
 
-                    <div class="blog-img"><img src="../../img/${image}"></div>
+                    <div class="blog-img"><img src="../upload/${image}"></div>
 
                     <div class="blog-body">
                     <p class="line">${body.substring(

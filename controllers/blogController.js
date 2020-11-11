@@ -4,7 +4,7 @@ const catchAsync = require('../utils/catchAsync');
 
 const storage = multer.diskStorage({
   destination: (req, file, callback) => {
-    callback(null, 'img/');
+    callback(null, '../public/upload/');
   },
   filename: (req, file, callback) => {
     const extension = file.mimetype.split('/')[1];
