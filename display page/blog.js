@@ -101,6 +101,7 @@ export default class Blog {
   eventlisteners() {
     const likebtn = this.el.querySelector(".like-button");
     const deleteBtn = this.el.querySelector(".delete-button");
+    const editBtn = this.el.querySelector(".edit-button");
     var like_count = this.el.querySelector(".like-count");
     var liked = 0;
 
@@ -173,5 +174,11 @@ export default class Blog {
       slide.classList.add("hidden");
       btn2.classList.add("hidden");
     };
+    editBtn.onclick = ()=>{
+      localStorage.setItem("blog-title",this.title);
+      localStorage.setItem("blog-body",this.body);
+      localStorage.setItem("blog-id",this.id);
+      window.location.href = "/edit page/index.html"
+    }
   }
 }
