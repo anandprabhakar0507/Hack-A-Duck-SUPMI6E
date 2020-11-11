@@ -29,7 +29,9 @@ document.querySelector(".edit-form").onsubmit = async (e) => {
     const formData = new FormData();
     formData.append("title", newTitle);
     formData.append("body", newBody);
-    formData.append("image", newFile);
+    if (newFile) {
+      formData.append("image", newFile);
+    }
     const res = await fetch(`http://localhost:3000/api/blogs/${id}`, {
       method: "PATCH",
       body: formData,

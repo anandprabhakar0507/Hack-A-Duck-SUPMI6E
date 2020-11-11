@@ -5,6 +5,9 @@
   width: 18px;
 }
 
+html{
+  scroll-behavior: smooth;
+}
 
 
  

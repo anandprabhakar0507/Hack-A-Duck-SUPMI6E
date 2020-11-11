@@ -1,4 +1,8 @@
-.hidden{
+html {
+  scroll-behavior: smooth;
+}
+
+.hidden {
   display: none;
 }
 .navbar {
@@ -21,9 +25,9 @@
 .btn {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: larger;
+  font-size: larger;
 }
-.signIn{
+.signIn {
   color: aliceblue;
 }
 a:hover {
@@ -43,12 +47,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-image: url("images/wallpaper.jpg");
   background-size: cover;
-
 }
 
-.container{
-     margin-top: 2rem;
-     margin-bottom: 5rem;
+.container {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
 }
 .remember {
   margin-bottom: 0.5rem;
@@ -59,25 +62,25 @@ body {
 }
 /* compose */
 
-.form-control{
-     margin-bottom: 1rem;
+.form-control {
+  margin-bottom: 1rem;
 }
-#img{
+#img {
   display: block;
   margin-bottom: 2%;
 }
-.compose{
-     font-size: 4rem;
-     border-bottom: 4px outset black;
-     border-radius: 9%;
-     margin-bottom: 1.5rem;
+.compose {
+  font-size: 4rem;
+  border-bottom: 4px outset black;
+  border-radius: 9%;
+  margin-bottom: 1.5rem;
 }
-.composeTitle{
-     font-size: 1.5rem;
-     padding-top: 1%;
+.composeTitle {
+  font-size: 1.5rem;
+  padding-top: 1%;
 }
-.composeImg{
-    font-size: 1.25rem;
+.composeImg {
+  font-size: 1.25rem;
 }
 
 /* FOOTER */
