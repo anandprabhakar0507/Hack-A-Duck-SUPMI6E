@@ -41,7 +41,6 @@ async function get_blogs() {
   }
 }
 
-
 async function renderblogs() {
   await get_blogs();
   blogs_box.innerHTML = "";
