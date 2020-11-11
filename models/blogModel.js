@@ -21,7 +21,7 @@ exports.blogSchema = new mongoose.Schema({
   },
   createdAt: {
     type: Date,
-    default: Date.now().toString(),
+    default: new Date().toISOString(),
   },
   image: {
     type: String,
