@@ -26,12 +26,12 @@ document.querySelector('.login-form').onsubmit = async function (e) {
       if (
         lastDirectory.startsWith('display')
       ) {
-        window.location.href = './index.html';
+        window.location.href = './display_html.html';
       } else {
         window.location.href = './display page/display_html.html';
       }
     } else {
-      throw new Error(respJSON.message);
+      throw new Error(respJSON.message + " ytaha");
     }
     console.log(respJSON);
   } catch (error) {
