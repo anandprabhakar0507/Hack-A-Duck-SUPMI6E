@@ -5,6 +5,8 @@ document.querySelector('.compose-form').onsubmit = async function (e) {
     const title = e.target.title.value;
     const body = e.target.body.value;
     const file = e.target.file.files[0];
+    const date = new Date().toISOString();
+    
     if (!title || !body) {
       throw new Error('Blog must have a title and a body');
     }
@@ -12,6 +14,8 @@ document.querySelector('.compose-form').onsubmit = async function (e) {
     formData.append('title', title);
     formData.append('body', body);
     formData.append('image', file);
+    formData.append('createdAt', date);
+    
     const res = await fetch('/api/blogs/', {
       method: 'POST',
       body: formData,
