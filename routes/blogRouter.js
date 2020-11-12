@@ -6,11 +6,11 @@ const router = express.Router();
 router
   .route('/:id')
   .get(blogController.getBlog)
-  .patch(blogController.uploadImage, blogController.updateBlog)
-  .delete(blogController.deleteBlog);
+  .patch(authController.protect, blogController.uploadImage, blogController.updateBlog)
+  .delete(authController.protect, blogController.deleteBlog);
 router
   .route('/')
   .get(blogController.getAllBlogs)
-  .post(blogController.uploadImage, blogController.addBlog);
+  .post(authController.protect, blogController.uploadImage, blogController.addBlog);
 
 module.exports = router;
